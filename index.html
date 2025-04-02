@@ -19,13 +19,27 @@
     justify-content: center;
     text-align: center;
     margin: 0;
-    background-image: url('my.jpeg'); /* Your image path */
-    background-size: cover; /* Ensures the image covers the full screen */
+    background-image: url('mytravelimage.jpg'); /* Your image path */
+    background-size: cover; /* Use 'cover' to make sure the image covers the whole screen */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents repeating the image */
     background-attachment: fixed; /* Keeps the image fixed during scrolling */
     position: relative;
     overflow: hidden;
+}
+
+/* For smaller screens like mobile devices */
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Ensures the whole image fits within smaller screens */
+    }
+}
+
+/* For larger screens like tablets and desktops */
+@media (min-width: 768px) {
+    body {
+        background-size: cover; /* Use cover for larger screens */
+    }
 }
 
 
