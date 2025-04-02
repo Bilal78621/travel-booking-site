@@ -11,7 +11,7 @@
             box-sizing: border-box;
         }
 
-        body {
+       body {
     font-family: 'Arial', sans-serif;
     height: 100vh;
     display: flex;
@@ -19,8 +19,8 @@
     justify-content: center;
     text-align: center;
     margin: 0;
-    background-image: url('my.jpeg'); /* Your image path */
-    background-size: cover; /* Use 'cover' to make sure the image covers the whole screen */
+    background-image: url('mytravelimage.jpg'); /* Your image path */
+    background-size: cover; /* Cover the whole screen */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents repeating the image */
     background-attachment: fixed; /* Keeps the image fixed during scrolling */
@@ -28,19 +28,21 @@
     overflow: hidden;
 }
 
-/* For smaller screens like mobile devices */
+/* For smaller screens (portrait mode on mobile devices) */
 @media (max-width: 768px) {
     body {
-        background-size: contain; /* Ensures the whole image fits within smaller screens */
+        background-size: contain; /* Makes sure the image fits completely */
+        background-position: top; /* Adjusts the image to fit vertically */
     }
 }
 
-/* For larger screens like tablets and desktops */
+/* For larger screens (tablet/desktop) */
 @media (min-width: 768px) {
     body {
-        background-size: cover; /* Use cover for larger screens */
+        background-size: cover; /* Ensure the image covers the screen */
     }
 }
+
 
 
 
