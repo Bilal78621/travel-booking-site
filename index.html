@@ -12,21 +12,44 @@
     }
 
     body {
-      font-family: 'Arial', sans-serif;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      margin: 0;
-      background-image: url('my.jpeg'); /* Your image path */
-      background-size: cover; /* Ensure the image covers the whole screen */
-      background-position: center; /* Centers the image */
-      background-repeat: no-repeat; /* Prevents repeating the image */
-      position: relative;
-      overflow: hidden;
-    }
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-image: url('my.jpeg');
+    background-size: cover;  /* Changed from 'cover' to 'contain' */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
 
+/* For mobile devices */
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: center top;
+    }
+    
+    /* Special adjustment for landscape mobile */
+    @media (orientation: landscape) {
+        body {
+            background-size: cover;
+            background-position: center left;
+        }
+    }
+}
+
+/* For tablets and desktops */
+@media (min-width: 769px) {
+    body {
+        background-size: contain;
+        background-position: center center;
+    }
+}
     /* For smaller screens (portrait mode on mobile devices) */
     @media (max-width: 768px) {
       body {
