@@ -36,7 +36,45 @@
     }
 
     .container {
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    background-image: url('my.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Mobile-first approach */
+@media (max-width: 768px) and (orientation: portrait) {
+    body {
+        background-size: cover;
+        background-position: center top; /* Focus on top part of image */
+    }
+}
+
+/* For landscape orientations */
+@media (max-width: 768px) and (orientation: landscape) {
+    body {
+        background-position: center left;
+    }
+}
+
+/* Larger screens */
+@media (min-width: 769px) {
+    body {
+        background-size: cover;
+        background-position: center center;
+    }
+}0.5);
       padding: 50px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
